@@ -1,5 +1,5 @@
 import React from 'react';
-import { Icon, makeStyles,Button,Checkbox } from '@material-ui/core';
+import { Icon, makeStyles,Button,Checkbox,Grid } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   button: {
@@ -12,28 +12,28 @@ function App() {
 
   return (
     <div>
-      <div>
 
-    <Button
-        variant="contained"
-        color="primary"
-        //className={classes.button}
-        endIcon={<Icon>send</Icon>}
-      >
-        Send
-      </Button>
-  
+   <Grid container spacing={8}>
+<Grid item xs={12} style={{backgroundColor:"red"}}>
+Hello World 1
+</Grid>
 
-      </div>
-      <div>
-      <Checkbox
-        defaultChecked
-        color="primary"
-        inputProps={{ 'aria-label': 'secondary checkbox' }}
-      />
-      </div>
-    
+<Grid item xs={7} style={{backgroundColor:"blue"}}>
+Hello World 2
+</Grid>
 
+<Grid item xs={5} style={{backgroundColor:"Green"}}>
+Hello World 3
+</Grid>
+
+<Grid item xs={6} style={{backgroundColor:"Pink"}}>
+Hello World 4
+</Grid>
+
+<Grid item xs={6} style={{backgroundColor:"Orange"}}>
+Hello World 5
+</Grid>
+   </Grid>
 
     </div>
   );
