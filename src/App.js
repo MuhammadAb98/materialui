@@ -1,5 +1,5 @@
 import React from 'react';
-import { Icon, makeStyles,Button } from '@material-ui/core';
+import { Icon, makeStyles,Button,Checkbox } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   button: {
@@ -22,7 +22,15 @@ function App() {
       >
         Send
       </Button>
+  
 
+      </div>
+      <div>
+      <Checkbox
+        defaultChecked
+        color="primary"
+        inputProps={{ 'aria-label': 'secondary checkbox' }}
+      />
       </div>
     
 
