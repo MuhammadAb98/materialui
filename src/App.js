@@ -1,10 +1,19 @@
 import React from 'react';
-import { Icon, makeStyles,Button,Checkbox,Grid } from '@material-ui/core';
-
+import { Icon, makeStyles,Button,Checkbox,Grid,AppBar,Toolbar,IconButton,Typography} from '@material-ui/core';
+import MenuIcon from '@material-ui/icons/Menu';
 const useStyles = makeStyles((theme) => ({
-  button: {
-    margin: theme.spacing(1),
+  root: {
+    flexGrow: 1,
   },
+  menuButton: {
+    marginRight: theme.spacing(2),
+  },
+  title: {
+    flexGrow: 1,
+  },
+  test:{
+    backgroundColor:"red"
+  }
 }));
 
 function App() {
@@ -13,27 +22,19 @@ function App() {
   return (
     <div>
 
-   <Grid container spacing={8}>
-<Grid item xs={12} style={{backgroundColor:"red"}}>
-Hello World 1
-</Grid>
-
-<Grid item xs={7} style={{backgroundColor:"blue"}}>
-Hello World 2
-</Grid>
-
-<Grid item xs={5} style={{backgroundColor:"Green"}}>
-Hello World 3
-</Grid>
-
-<Grid item xs={6} style={{backgroundColor:"Pink"}}>
-Hello World 4
-</Grid>
-
-<Grid item xs={6} style={{backgroundColor:"Orange"}}>
-Hello World 5
-</Grid>
-   </Grid>
+<div className={classes.root}>
+      <AppBar position="static">
+        <Toolbar>
+          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+            <MenuIcon />
+          </IconButton>
+          <Typography variant="h6" className={classes.title}>
+            News
+          </Typography>
+          <Button color="inherit" className={classes.test}>Login</Button>
+        </Toolbar>
+      </AppBar>
+    </div>
 
     </div>
   );
